@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokyoTable</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    <p>❤️ Your Daily Taste of Tokyo. <a href="#">Sign Up</a></p>
+  </div>
+  <header class="main-header">
+    <h1 class="logo">Tokyo<span>Table</span></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Recipes</a>
+      <a href="#">Start Here</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search our recipes">
+    </div>
+  </header>
+
+  <section class="tagline">
+    <p>SIMPLE RECIPES MADE FOR <em>real, actual, everyday life</em>.</p>
+  </section>
+
+  <section class="featured-recipes">
+  <div class="card">
+    <img src="images/dessert.jpg" alt="Dessert">
+    <button>DESSERTS</button>
+  </div>
+  <div class="card">
+    <img src="images/popular.jpg" alt="Most Popular">
+    <button>MOST POPULAR</button>
+  </div>
+  <div class="card">
+    <img src="images/dinner.jpg" alt="Dinner">
+    <button>DINNER</button>
+  </div>
+  <div class="card">
+    <img src="images/healthy.jpg" alt="Healthy">
+    <button>HEALTHY</button>
+  </div>
+</section>
+
+  <section class="categories">
+    <div class="circle">Quick & Easy</div>
+    <div class="circle">Dinner</div>
+    <div class="circle">Vegetarian</div>
+    <div class="circle">Healthy</div>
+    <div class="circle">Instant Pot</div>
+    <div class="circle">Vegan</div>
+    <div class="circle">Meal Prep</div>
+    <div class="circle">Soups</div>
+    <div class="circle">Salads</div>
+  </section>
+
+  <section class="view-all">
+    <input type="text" placeholder="Search our recipes">
+    <button>+ VIEW ALL RECIPES</button>
+  </section>
+
+<!-- New Section: Posts + Sidebar -->
+  <section class="main-content">
+    <div class="left">
+      <h2>The Latest & Greatest</h2>
+
+      <div class="post">
+        <img src="images/shrimp-curry.jpg" alt="Thai Shrimp Curry">
+        <div>
+          <p class="date">May 27, 2025</p>
+          <h3>Thai Shrimp Curry with Yummy Shallot Crispies</h3>
+          <p>This shrimp curry is the curry of my dreams! Incredible flavor, just a few simple ingredients, and easy enough for a weeknight!</p>
+          <a href="#">Continue Reading</a>
+        </div>
+      </div>
+
+      <div class="post">
+        <img src="images/tofu-salad.jpg" alt="Buffalo Tofu">
+        <div>
+          <p class="date">May 20, 2025</p>
+          <h3>Crispy Buffalo Tofu with Caesar Salad</h3>
+          <p>This Buffalo Tofu is SO EASY! A two-ingredient sauce tossed with air-fried crispy tofu, laid on top of a kale caesar salad.</p>
+          <a href="#">Continue Reading</a>
+        </div>
+      </div>
+
+      <div class="post">
+        <img src="images/burger-bowl.jpg" alt="Burger Bowl">
+        <div>
+          <p class="date">May 13, 2025</p>
+          <h3>Burger Bowls with House Sauce and Ranch Fries</h3>
+          <p>A burger in a bowl! Ranch-seasoned fries topped with a burger patty and all the fixings, with a drizzle of house sauce to take it over the top!</p>
+          <a href="#">Continue Reading</a>
+        </div>
+      </div>
+
+      <a class="more-button" href="#">VIEW MORE RECENT POSTS</a>
+    </div>
+
+    <div class="right">
+      <img src="images/freezer-meals.jpg" alt="Freezer Meals">
+      <div class="recipe-collections">
+        <h4>Recipe Collections</h4>
+        <ul>
+          <li>Instant Pot Recipes (37)</li>
+          <li>Vegan Recipes (199)</li>
+          <li>Meal Prep Recipes (36)</li>
+          <li>Quick and Easy Recipes (484)</li>
+          <li>Pasta Recipes (173)</li>
+          <li>Soup Recipes (70)</li>
+          <li>Most Popular Recipes (89)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<!-- Social + Newsletter Top Bar -->
+<section class="social-newsletter-bar">
+  <div class="social-links">
+    <span>FOLLOW US</span>
+    <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="images/icon-pinterest.png" alt="Pinterest"></a>
+    <a href="#"><img src="images/icon-tiktok.png" alt="TikTok"></a>
+    <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="images/icon-youtube.png" alt="YouTube"></a>
+  </div>
+  <div class="newsletter-signup">
+    <span><em>signup</em> FOR EMAIL UPDATES</span>
+    <form>
+      <input type="text" placeholder="First Name" required>
+      <input type="email" placeholder="Email" required>
+      <button>GO</button>
+    </form>
+  </div>
+</section>
+
+<!-- Recipe Filters -->
+<section class="recipe-tabs">
+  <button class="tab">VEGETARIAN</button>
+  <button class="tab">QUICK + EASY</button>
+  <button class="tab">POPULAR ON PINTEREST</button>
+</section>
+
+<!-- Featured Recipe Cards -->
+<section class="recipe-thumbnails">
+  <div class="recipe-card">
+    <img src="images/pasta.jpg" alt="Pasta">
+    <span class="category">PASTA</span>
+    <h4>Roasted Red Pepper Pasta</h4>
+  </div>
+  <div class="recipe-card">
+    <img src="images/broccoli.jpg" alt="Air Fryer Broccoli">
+    <span class="category">SIDES</span>
+    <h4>Ridiculously Good Air Fryer Broccoli</h4>
+  </div>
+  <div class="recipe-card">
+    <img src="images/soup.jpg" alt="Cauliflower Soup">
+    <span class="category">SOUPS</span>
+    <h4>Sweet Potato Soup with Roasted Cauliflower Crumbles</h4>
+  </div>
+  <div class="recipe-card">
+    <img src="images/brussels.jpg" alt="Brussels Sprouts">
+    <span class="category">SIDES</span>
+    <h4>Brussels Sprouts with Gochujang Butter</h4>
+  </div>
+</section>
+
+<!-- Top 25 Recipes Section -->
+<section class="top-recipes-section">
+  <div class="top-recipes-container">
+    <div class="top-recipes-image">
+      <img src="images/top-25-recipes.jpg" alt="Top 25 Recipes Cookbook">
+    </div>
+    <div class="top-recipes-content">
+      <p class="top-recipes-get-it">get it now</p>
+      <h2>Pinch of Yum Cookbook</h2>
+      <p class="top-recipes-description">
+        The eBook includes our most popular 25 recipes in a beautiful, easy to download format.
+        Enter your email and we'll send it right over!
+      </p>
+      <form class="top-recipes-form">
+        <input type="text" placeholder="First Name" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">GO</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Secondary Newsletter Signup -->
+<section class="secondary-newsletter">
+  <h4><em>signup</em> FOR EMAIL UPDATES</h4>
+  <p>Get a free cookbook with our top 25 recipes.</p>
+  <form>
+    <input type="text" placeholder="First Name" required>
+    <input type="email" placeholder="Email" required>
+    <button type="submit">GO</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h5>PINCH OF YUM</h5>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Recipe Index</a></li>
+        <li><a href="#">Blogging Resources</a></li>
+        <li><a href="#">Income Reports</a></li>
+        <li><a href="#">Media Mentions</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>FOOD & RECIPES</h5>
+      <ul>
+        <li><a href="#">Sugar Free January</a></li>
+        <li><a href="#">Travel Meals 101</a></li>
+        <li><a href="#">Quick and Easy Recipes</a></li>
+        <li><a href="#">Slow Cooker Recipes</a></li>
+        <li><a href="#">Pasta Recipes</a></li>
+        <li><a href="#">Vegan Recipes</a></li>
+        <li><a href="#">Soup Recipes</a></li>
+        <li><a href="#">Taco Recipes</a></li>
+        <li><a href="#">Meal Prep Recipes</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-social-brand">
+    <div class="footer-social">
+      <a href="#"><img src="images/icon-instagram.jpg" alt="Instagram"></a>
+      <a href="#"><img src="images/icon-pinterest.jpg" alt="Pinterest"></a>
+      <a href="#"><img src="images/icon-tiktok.jpg" alt="TikTok"></a>
+      <a href="#"><img src="images/icon-facebook.jpg" alt="Facebook"></a>
+      <a href="#"><img src="images/icon-youtube.jpg" alt="YouTube"></a>
+    </div>
+    <div class="footer-logo">
+      <img src="images/logo-pinch-of-yum.png" alt="Tokyo Table">
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; 2025 Pinch of Yum. All rights reserved. A Digital Partner Site.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+    <p>Information from your device can be used to personalize your experience.</p>
+    <p><a href="#">Do not sell or share my personal information.</a></p>
+  </div>
+
+  <div class="footer-brands">
+    <p>OUR OTHER BRANDS</p>
+    <img src="images/logo-food-blogger-pro.png" alt="Food Blogger Pro">
+    <img src="images/logo-clariti.png" alt="Clariti">
+  </div>
+</footer>
+
+<!-- Floating Like Button -->
+<div class="like-button">
+  <img src="images/heart-icon.png" alt="Like">
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 TokyoTable. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
