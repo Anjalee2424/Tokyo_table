@@ -9,7 +9,7 @@
   <header class="main-header">
     <h1 class="logo">Tokyo<span>Table</span></h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.php">Home</a>
       <a href="#">About</a>
       <a href="#">Recipes</a>
       <a href="#">Start Here</a>

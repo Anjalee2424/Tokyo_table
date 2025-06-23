@@ -31,7 +31,7 @@
   <section class="featured-recipes">
   <div class="card">
     <img src="images/dessert-bars.jpg" alt="Dessert">
-    <a href="desserts.html"><button>DESSERTS</button></a>
+    <a href="desserts.php"><button>DESSERTS</button></a>
   </div>
   <div class="card">
     <img src="images/popular.jpg" alt="Most Popular">
