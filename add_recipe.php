@@ -122,6 +122,10 @@ $categories = $pdo->query("SELECT id, name FROM categories ORDER BY name")->fetc
             <?php foreach ($categories as $cat): ?>
                 <option value="<?= htmlspecialchars($cat['id']) ?>">
                     <?= htmlspecialchars($cat['name']) ?>
+                    <a href="recipes.php?category_id=<?= htmlspecialchars($cat['id']) ?>">
+  <?= htmlspecialchars($cat['name']) ?>
+</a>
+
                 </option>
             <?php endforeach; ?>
         </select>

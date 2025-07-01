@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <!-- Dessert Details Popup -->
+ <!-- Dessert Details Popup -->
     <div id="dessert-details" class="dessert-details" style="display: none;">
       <img id="dessert-image" src="" alt="">
       <h3 id="dessert-title"></h3>
@@ -80,7 +80,7 @@
       </div>
 
       <div class="steps">
-        <h4>Steps</h4>
+        <h4>Steps</h4>   
         <ol id="steps-list"></ol>
       </div>
     </div>
