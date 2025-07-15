@@ -1,7 +1,7 @@
 CREATE TABLE `categories` (
   `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL UNIQUE,
-  `image_path` VARCHAR(255) DEFAULT NULL,
+  `image_path` VARCHAR(255) DEFAULT NULL
 );
 
 CREATE TABLE `recipes` (
