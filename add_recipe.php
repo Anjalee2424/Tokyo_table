@@ -5,12 +5,12 @@ if (!isset($_SESSION['user'])) {
     exit();
 }
 
-require_once 'db.php'; // PDO接続ファイルを読み込む
+require_once 'db.php';
 
 $message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $category_id = $_POST['category']; // selectで送られるID
+    $category_id = $_POST['category'];
     $title = $_POST['title'];
     $ingredients = $_POST['ingredients'];
     $steps = $_POST['steps'];
@@ -28,50 +28,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $stmt = $pdo->prepare("INSERT INTO recipes (category_id, title, ingredients, steps, image_path) VALUES (?, ?, ?, ?, ?)");
         $stmt->execute([$category_id, $title, $ingredients, $steps, $image_path]);
-        $message = "Recipe saved successfully!";
+        $message = "🎉 Recipe saved successfully!";
     } catch (PDOException $e) {
-        $message = "Error saving recipe: " . $e->getMessage();
+        $message = "Error: " . $e->getMessage();
     }
 }
 
-// カテゴリー一覧取得
 $categories = $pdo->query("SELECT id, name FROM categories ORDER BY name")->fetchAll();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Recipe - Tokyo Table</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #eef2f7;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #a0f0f9, #fce4ec);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 2rem;
         }
 
-        h2 {
-            color: #333;
-        }
-
-        form {
+        .container {
             background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
             max-width: 600px;
+            width: 100%;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
-        input[type=text],
-        textarea,
-        input[type=file],
-        select {
+        h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        select, input[type="text"], textarea, input[type="file"] {
             width: 100%;
-            padding: 0.6rem 0.8rem;
+            padding: 0.75rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 1rem;
         }
 
@@ -80,27 +84,31 @@ $categories = $pdo->query("SELECT id, name FROM categories ORDER BY name")->fetc
         }
 
         button {
-            background: #0077cc;
+            background: #ff4081;
             color: white;
-            padding: 0.7rem 1.2rem;
             border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
+            border-radius: 8px;
+            padding: 0.75rem 1.2rem;
+            font-size: 1rem;
+            width: 100%;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
 
         button:hover {
-            background: #005fa3;
+            background: #e91e63;
         }
 
         .message {
             margin-top: 1rem;
+            text-align: center;
             font-weight: bold;
             color: green;
         }
 
         .logout {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
         }
 
         .logout a {
@@ -113,34 +121,34 @@ $categories = $pdo->query("SELECT id, name FROM categories ORDER BY name")->fetc
         }
     </style>
 </head>
-
 <body>
-    <h2>Add a New Recipe</h2>
+
+<div class="container">
+    <h2>🍱 Add a New Recipe</h2>
     <form method="POST" enctype="multipart/form-data">
         <select name="category" required>
             <option value="">-- Select Category --</option>
             <?php foreach ($categories as $cat): ?>
                 <option value="<?= htmlspecialchars($cat['id']) ?>">
                     <?= htmlspecialchars($cat['name']) ?>
-                    <a href="recipes.php?category_id=<?= htmlspecialchars($cat['id']) ?>">
-  <?= htmlspecialchars($cat['name']) ?>
-</a>
-
                 </option>
             <?php endforeach; ?>
         </select>
-        <input type="text" name="title" placeholder="Title" required />
-        <textarea name="ingredients" rows="4" placeholder="Ingredients" required></textarea>
-        <textarea name="steps" rows="6" placeholder="Steps" required></textarea>
+        <input type="text" name="title" placeholder="Recipe Title" required />
+        <textarea name="ingredients" rows="4" placeholder="Ingredients (e.g. 1 cup rice, 2 tsp salt)" required></textarea>
+        <textarea name="steps" rows="6" placeholder="Cooking Steps" required></textarea>
         <input type="file" name="image" accept="image/*" />
-        <button type="submit">Save Recipe</button>
+        <button type="submit">📌 Save Recipe</button>
     </form>
+
     <?php if ($message): ?>
         <p class="message"><?= htmlspecialchars($message) ?></p>
     <?php endif; ?>
-    <div class="logout">
-        <a href="logout.php">Logout</a>
-    </div>
-</body>
 
+    <div class="logout">
+        <a href="logout.php">🔓 Logout</a>
+    </div>
+</div>
+
+</body>
 </html>

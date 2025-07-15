@@ -13,16 +13,40 @@
   body {
     margin: 0; padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f9fafb;
+    background: url('images/about.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #2c3e50;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    background: url('images/about.jpg') no-repeat center center fixed;
-    background-size: cover;
   }
+  nav {
+    width: 900px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.5rem;
+    background: linear-gradient(90deg, #ff6fa7, #00f2fe);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255,111,167,0.3);
+    margin-bottom: 30px;
+  }
+  nav a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffdde1;
+    text-decoration: underline;
+  }
+
   .about-container {
     background: white;
     max-width: 900px;
@@ -62,6 +86,11 @@
   }
   /* Responsive */
   @media (max-width: 600px) {
+    nav {
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
     .about-container {
       padding: 30px 20px;
     }
@@ -72,6 +101,11 @@
 </style>
 </head>
 <body>
+
+<nav>
+  <a href="index.php">Home</a>
+  <a href="start_here.php">Start Here</a>
+</nav>
 
 <div class="about-container">
   <h1>🍽️ Explore the World Through Cultural Foods</h1>
